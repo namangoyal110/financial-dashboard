@@ -53,7 +53,7 @@ const FinancialDashboard = () => {
       const recentTransactionsResponse = await axios.get('https://financial-dashboard-backend-f5nu.onrender.com/api/recent-transactions');
       setRecentTransactions(recentTransactionsResponse.data);
 
-      const upcomingBillsResponse = await axios.get('https://https://financial-dashboard-backend-f5nu.onrender.com/api/upcoming-bills');
+      const upcomingBillsResponse = await axios.get('https://financial-dashboard-backend-f5nu.onrender.com/api/upcoming-bills');
       setUpcomingBills(upcomingBillsResponse.data);
 
       const savingsGoalsResponse = await axios.get('https://financial-dashboard-backend-f5nu.onrender.com/api/savings-goals');
