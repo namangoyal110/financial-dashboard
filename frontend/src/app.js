@@ -47,16 +47,16 @@ const FinancialDashboard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const balanceResponse = await axios.get('https://financial-dashboard-backend.onrender.com/api/balance');
+      const balanceResponse = await axios.get('https://financial-dashboard-backend-f5nu.onrender.com/api/balance');
       setCurrentBalance(balanceResponse.data.currentBalance);
 
-      const recentTransactionsResponse = await axios.get('https://financial-dashboard-backend.onrender.com/api/recent-transactions');
+      const recentTransactionsResponse = await axios.get('https://financial-dashboard-backend-f5nu.onrender.com/api/recent-transactions');
       setRecentTransactions(recentTransactionsResponse.data);
 
-      const upcomingBillsResponse = await axios.get('https://financial-dashboard-backend.onrender.com/api/upcoming-bills');
+      const upcomingBillsResponse = await axios.get('https://https://financial-dashboard-backend-f5nu.onrender.com/api/upcoming-bills');
       setUpcomingBills(upcomingBillsResponse.data);
 
-      const savingsGoalsResponse = await axios.get('https://financial-dashboard-backend.onrender.com/api/savings-goals');
+      const savingsGoalsResponse = await axios.get('https://financial-dashboard-backend-f5nu.onrender.com/api/savings-goals');
       setSavingsGoals(savingsGoalsResponse.data);
     };
 
@@ -67,7 +67,7 @@ const FinancialDashboard = () => {
     const amount = parseInt(prompt('Enter amount to add:'), 10);
     if (isNaN(amount) || amount <= 0) return;
 
-    const response = await axios.post('https://financial-dashboard-backend.onrender.com/api/add-money', { amount });
+    const response = await axios.post('https://financial-dashboard-backend-f5nu.onrender.com/api/add-money', { amount });
     setCurrentBalance(response.data.currentBalance);
   };
 
@@ -75,10 +75,10 @@ const FinancialDashboard = () => {
     const amount = parseInt(prompt('Enter amount to send:'), 10);
     if (isNaN(amount) || amount <= 0) return;
 
-    const response = await axios.post('https://financial-dashboard-backend.onrender.com/api/send-money', { amount });
+    const response = await axios.post('https://financial-dashboard-backend-f5nu.onrender.com/api/send-money', { amount });
     setCurrentBalance(response.data.currentBalance);
 
-    const recentTransactionsResponse = await axios.get('https://financial-dashboard-backend.onrender.com/api/recent-transactions');
+    const recentTransactionsResponse = await axios.get('https://financial-dashboard-backend-f5nu.onrender.com/api/recent-transactions');
     setRecentTransactions(recentTransactionsResponse.data);
   };
 
